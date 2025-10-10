@@ -1,0 +1,100 @@
+#sectionAprovacao {
+    margin-top: 50px;
+}
+#selectC {
+    color: white;
+}
+#selectC select {
+    height: 35px;
+    border-radius: 5px;
+}
+.dataCronogramaSelect label{
+    color: white;
+}
+.containerAprovacao {
+    margin-top: 50px;
+    margin-left: 5%;
+    width: 90%;
+}
+.selectClient {
+    text-align: center;
+}
+.selecionClinete {
+    text-align: center;
+    border-radius: 5px;
+    height: 30px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+.dataCronogramaSelect {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.dataCronogramaSelect input{
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.btnDiv {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}.bntBuscarCronograma {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+#Alerta{
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
+.conteudoAprovacao {
+    width: 90%;
+    margin-left: 05%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.BtnAprovaçãoCalendario {
+    margin-top: 10px;
+}
+#aprovacaoAprovar{
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    margin-left: 25%;
+    cursor: pointer;
+}
+.BtnAprovaçãoCalendario input {
+    cursor: pointer;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+#AjusteCrister {
+    display: flex;
+    flex-direction: column;
+}
+.areaAjusteCliente {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.areaLegenda  {
+    text-align: start;
+    word-wrap: break-word;   
+}
+.conteudoArteAprovacao {
+    height: auto;
+    padding: 10px;
+}
+.art {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+}

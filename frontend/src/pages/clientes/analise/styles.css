@@ -1,0 +1,121 @@
+#analiseClienteSEction {
+    padding-top: 50px;
+}
+#containerAnaliseCliente {
+    width: 100%;
+    margin-left: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contentpublication {
+    background-color: #424568;
+    padding: 10px;
+    flex: 1 1 calc(33.333% - 40px); /* três colunas menos gap total */
+    max-width: calc(33.333% - 40px);
+    min-width: 280px;               /* impede ficar muito estreito */
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+.dataContent {
+    width: 100%;
+    background-color: rgb(197, 169, 169);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.txtDataContent {
+    font-weight: 900;
+}
+.clietneFormato{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.coteudoArteCliente {
+    background-color: azure;
+    width: 100%;
+    margin-left: 0%;
+    height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.artCliente {
+    height: 100%;
+    background-color: aqua;
+    width: 100%;
+}
+.legendaCliente{
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.roteiroStoryCliente {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}.roteiroStoryCliente h3 {
+    margin-bottom: 10px;
+}
+.SenMovie {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: aqua;
+}.sendMoviBtn {
+    margin-top: 10px;
+    background-color: rgb(57, 57, 59);
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.BtnAprovação {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btnAprova {
+    background-color: #63657a;
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    padding: 5px;
+    font-weight: 600;
+}
+.ajustecontent {
+    background-color: blueviolet;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+.txtAreaAjuste{
+    width: 90%;
+    margin-bottom: 10px;
+}
+.solicitarAjuste {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.areaLegenda  {
+    text-align: center;
+    word-wrap: break-word;   
+}

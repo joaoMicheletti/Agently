@@ -1,0 +1,150 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+    display: none;
+    animation: spin 1s linear infinite;
+    width: 20%;
+    margin-left: 40%;
+}
+#sectionAprovacao {
+    
+    margin-top: 50px;
+}
+.containerAprovacao {
+    margin-top: 50px;
+    margin-left: 5%;
+    width: 90%;
+}
+.selectClient {
+    text-align: center;
+}
+.selecionClinete {
+    text-align: center;
+    border-radius: 5px;
+    height: 30px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+.dataCronogramaSelect {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.dataCronogramaSelect input{
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.btnDiv {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}.bntBuscarCronograma {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+#Alerta{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(43, 24, 24);
+}
+.conteudoAprovacao {
+    width: 90%;
+    margin-left: 05%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.BtnAprovaçãoCalendario {
+    margin-top: 10px;
+}
+.aprovacaoAprovar{
+    text-align: center;
+    width: 60%;
+    height: 30px;
+    margin-left: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.BtnAprovaçãoCalendario input {
+    cursor: pointer;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+#AjusteCrister {
+    display: flex;
+    flex-direction: column;
+}
+.areaAjusteCliente {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+.coteudoArquivos{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.coteudoArquivos input {
+    cursor: pointer;
+}
+.coteudoArquivos button {
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+#descricaoArte {
+    margin-top: 10px;
+    background-color: rgb(157, 170, 166);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: start;
+    word-wrap: break-word; 
+    margin-bottom: 10px;
+}
+.legendaPublicação  {
+    text-align: start;
+    word-wrap: break-word;   
+}
+.redeImg { 
+    height: 150px;
+    padding: 10px; 
+    max-width: 100%;
+    height: auto;
+}
+.imgREnder {
+    display: none;
+    width: 80%;
+    height: 50%;
+    margin-left: 10%;
+}.rendervideo {
+    display: none;
+    width: 80%;
+    height: 50%;
+    margin-left: 10%;
+}
+.carrossel {
+    background-color: rgb(80, 80, 126);
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+#buttonLegenda {
+    margin-top: -10px;
+    height: 35px;
+    width: 50%;
+    border-radius: 5px;
+    margin-left: 25%;
+    cursor: pointer;
+}
