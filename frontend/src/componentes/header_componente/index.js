@@ -4,7 +4,7 @@ import { MdNotificationAdd } from "react-icons/md";
 import { GiExitDoor } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import Api from '../../services/api.js';
-import Icone from  '../../assets/image/favicon.png';
+import Icone from  './assets/favicon.png';
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { FiCheckSquare } from "react-icons/fi";
 

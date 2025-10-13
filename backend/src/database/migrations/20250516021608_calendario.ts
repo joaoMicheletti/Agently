@@ -15,6 +15,7 @@ export async function up(knex: Knex): Promise<void> {
         table.text('nomeArquivos');
         table.string("legenda");
         table.string("descricaoLegenda");
+        table.string('StoryStrucaoes');
         table.string("storyRoteiro");
         table.string("story");
         table.string('ajusteCrister');

@@ -10,76 +10,160 @@
     margin-left: 40%;
 }
 #sectionAprovacao {
-    
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 50px;
 }
-.containerAprovacao {
+.containerUpdateMedia {
     margin-top: 50px;
     margin-left: 5%;
     width: 90%;
 }
-.selectClient {
-    text-align: center;
-}
-.selecionClinete {
-    text-align: center;
-    border-radius: 5px;
-    height: 30px;
-    width: 50%;
-    margin-bottom: 10px;
-}
-.dataCronogramaSelect {
+.dataCronogramaUpdate {
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
 }
-.dataCronogramaSelect input{
-    height: 30px;
+.dataSelectUpdate {
+    width: 80%;
+    height: 40px;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-color: rgb(167, 167, 165);
 }
 .btnDiv {
     text-align: center;
     padding: 10px;
     width: 100%;
+    padding-bottom: 50px;
 }.bntBuscarCronograma {
     width: 50%;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    background-color: #007bff;
 }
 #Alerta{
     font-size: 20px;
     font-weight: 600;
-    color: rgb(43, 24, 24);
+    color: rgb(235, 3, 3);
 }
-.conteudoAprovacao {
+.conteudoAprovacaoUpdate {
     width: 90%;
     margin-left: 05%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 10px;
 }
-.BtnAprovaçãoCalendario {
-    margin-top: 10px;
+.contentpublicationUpdateMedia {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(182, 182, 182, 0.836);
+    width: 30%;
 }
-.aprovacaoAprovar{
-    text-align: center;
-    width: 60%;
-    height: 30px;
-    margin-left: 20%;
-    border-radius: 5px;
-    cursor: pointer;
+.dataContentUpdate {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
 }
-.BtnAprovaçãoCalendario input {
-    cursor: pointer;
-    background-color: blueviolet;
-    border-radius: 5px;
-}
-#AjusteCrister {
+.coteudoArteUpdateMedia {
+    width: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
+.DescricaoArteUpdateMedia{
+    margin-top: 10px;
+    background-color: rgb(131, 134, 133);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: start;
+    word-wrap: break-word; 
+    margin-bottom: 10px;
+    width: 80%;
+    margin-left: 10%;
+}
+.buttonUpdateMedia{ 
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;font-weight: 600;
+}
+.descricaoLegendaUpdateMedia{
+    margin-top: 10px;
+    background-color: rgb(131, 134, 133);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: start;
+    word-wrap: break-word; 
+    margin-bottom: 10px;
+    width: 80%;
+    margin-left: 10%;
+}
+.legendaClienteUpdateMedia {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.legendaPublicaçãoUpdateMedia  {
+    width: 100%;
+    margin-top: 20px;
+    text-align: start;
+    word-wrap: break-word;
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+
+.BtnAprovaçãoCalendarioUpdateMedia {
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.buttonLegendaUpdateMedia {
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    background-color: #007bff;
+}
+.buttonLegendaUpdateMedia:hover{
+    background-color: #0056b3;
+    transition: 0.5s;
+}
+.aprovacaoAprovarUpadateMedia{
+    text-align: center;
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+.aprovacaoAprovarUpadateMedia:hover{
+    background-color: #0056b3;
+    transition: 0.5s;
+}
+
 .areaAjusteCliente {
     width: 80%;
     height: auto;
@@ -95,13 +179,7 @@
 .coteudoArquivos input {
     cursor: pointer;
 }
-.coteudoArquivos button {
-    margin-top: 10px;
-    height: 30px;
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
-}
+
 #descricaoArte {
     margin-top: 10px;
     background-color: rgb(157, 170, 166);
@@ -111,10 +189,7 @@
     word-wrap: break-word; 
     margin-bottom: 10px;
 }
-.legendaPublicação  {
-    text-align: start;
-    word-wrap: break-word;   
-}
+
 .redeImg { 
     height: 150px;
     padding: 10px; 

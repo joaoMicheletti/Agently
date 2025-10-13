@@ -51,22 +51,21 @@ export default function AprovacaoConteudo() {
     <>
       <HeaderComponente/>
       <section id="sectionAprovacao">
-        <div className="containerAprovacao">
-          <div className="selectClient">
-            
-          </div>
-          <div className="dataCronogramaSelect">
+        <div className="containerUpdateMedia">
+          <div className="dataCronogramaUpdate">
             <label>
-              Data de início:<br/>
+              Data de início<br/>
               <input
+                className="dataSelectUpdate"
                 type="date"
                 value={inicio}
                 onChange={e => setInicio(e.target.value)}
               />
             </label>
             <label>
-              Data de término:<br/>
+              Data de término<br/>
               <input
+                className="dataSelectUpdate"
                 type="date"
                 value={fim}
                 onChange={e => setFim(e.target.value)}
@@ -84,7 +83,7 @@ export default function AprovacaoConteudo() {
           </div>
         </div>
 
-        <div className="conteudoAprovacao">
+        <div className="conteudoAprovacaoUpdate">
           {calendario.map((item) => {
             
             // funcão para enviar os arquivos para o  banco de dados:
@@ -351,14 +350,14 @@ export default function AprovacaoConteudo() {
                        
             return(
 
-              <div className="contentpublication" id={`_${item.id}`}  key={item.id} >
+              <div className="contentpublicationUpdateMedia" id={`_${item.id}`}  key={item.id} >
                 
-                <div className="dataContent">
+                <div className="dataContentUpdate">
                     <FaCalendarAlt size={20}/>
                     <p className="txtDataContent">{`${item.dia}/${item.mes}/${item.ano}`}</p>
                 </div>
 
-                <div className="coteudoArte">
+                <div className="coteudoArteUpdateMedia">
                     <label>
                         Tema:
                         <h3>{item.tema}</h3>
@@ -367,14 +366,15 @@ export default function AprovacaoConteudo() {
 
                 </div>
 
-                <div className="coteudoArte">
+                <div className="coteudoArteUpdateMedia">
                     <label>
                         Formato:
                         <h3>{item.formato}</h3>
                     </label>
                 </div>
-                <div id="descricaoArte">
-                  <h3>Arte descrição:</h3><br/>
+
+                <div className="DescricaoArteUpdateMedia">
+                  <p>Arte descrição:</p><br/>
                   <p>{item.descricaoArte}</p>
                 </div>
                 
@@ -393,28 +393,25 @@ export default function AprovacaoConteudo() {
                     type="file" multiple 
                     onChange={e => handleFileChange(item.id, e)}
                   />
-                  <button type="button" 
+                  <button className="buttonUpdateMedia" type="button" 
                     placeholder='Salvar aquivos'
                     onClick={() => handleUpload(item)}
                   >Salvar material</button>
                 </div>
                 
-                <div id="descricaoArte">
-                  <h3>Legenda descrição:</h3><br/>
+                <div className="descricaoLegendaUpdateMedia">
+                  <p>Descrição para Legenda:</p><br/>
                   <p>{item.descricaoArte}</p>
                 </div>
-                <div className="legendaCliente">
-                    <h3>Legenda:<p id="LEGENDAR"></p> </h3>
-                    <textarea onChange={e => setLegenda(e.target.value)} rows={15} className="legendaPublicação" 
+                <div className="legendaClienteUpdateMedia">
+                    <p>Legenda</p>
+                    <textarea onChange={e => setLegenda(e.target.value)} rows={10} className="legendaPublicaçãoUpdateMedia" 
                       placeholder={item.legenda}>
                     </textarea>
                 </div>
-                <input id="buttonLegenda" type="button" value="Salvar Legenda" onClick={updateLegenda}/>
-
-                
-
-                <div className="BtnAprovaçãoCalendario">
-                    <button className="aprovacaoAprovar" onClick={solicitarAprovacaoTime} type="buttonn">Solicitar aprovação</button>
+                <div className="BtnAprovaçãoCalendarioUpdateMedia">
+                    <input className="buttonLegendaUpdateMedia" type="button" value="Salvar Legenda" onClick={updateLegenda}/>
+                    <button className="aprovacaoAprovarUpadateMedia" onClick={solicitarAprovacaoTime} type="buttonn">Solicitar aprovação</button>
                 </div>
               </div>
 

@@ -3,21 +3,45 @@
     margin-left: 10%;
     margin-top: 50px;
 }
+.selectClient {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.selectClient #selectC{
+    color: black;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.selectClient select{
+    margin-top: 20px;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(214, 218, 218);
+}
 #One{
     padding: 10px;
     border-radius: 10px;
     height: auto;
-    background-color: rgba(61, 57, 57, 0.473);
+    background-color: rgba(231, 227, 227, 0.473);
     width: 80%;
     margin-left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.781) ;
 }
 .OneDiv {
     color: white;
     width: 100%;
-    height: 50px;
+    padding: 10px;
+    height: 80px;
     margin-bottom: 10px;
     margin-top: 10px;
-    background-color: rgba(61, 57, 57, 0.473);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,19 +68,29 @@
     border-radius: 5px;
 }
 #nome {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .OneDiv label{
     width: 60%;
 }
 .OneDiv input {
     width: 100%;
-    height: 25px;
+    height: 35px;
     border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
 }
 .OneDiv button{
     width: 30%;
     border-radius: 10px;
     font-weight: 600;
+    background-color: #2d52b8;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
 
+}
+.OneDiv button:hover{
+    background-color: #1b3a7a;
+    
 }

@@ -1,9 +1,8 @@
 import React, { use, useState } from "react";
 import Api from '../../../services/api';
 import './styles.css';
-import { useNavigate } from "react-router-dom";
-import logoLogin from '../../../assets/image/logoLogin.webp'
-
+import { useNavigate,  Link } from "react-router-dom";
+import logoLogin from './assets/agentlyLogo.webp';
 export default function LoginUser() {
     const Hystory = useNavigate();
     // Coloque os hooks useState fora da função Login
@@ -57,13 +56,22 @@ export default function LoginUser() {
     return (
         <>
             <section id="sectionFormulario">
-                <div id="divformularioLogin">
-                    <form id="formularioLoginUser">
-                        <img id="logoLogin" src={logoLogin} alt="logo img" />
+                <div className="containerLogin">
+                    <div className="contentLogin">
+                        
+                        <img src={logoLogin} alt="logo img" />
+                        <Link to="/" id="LinkRegister">HOME</Link><br/>
+                        <br />
+                        <Link to="/registerCrister" id="LinkRegister">Não possui uma conta? Cadastre-se</Link>
+                    </div>
+                    <form className="formLogin">
+                        <br/>
+                        <h1 id="titleFormLogin">LOGIN</h1>
+                       
                         <input
                             onChange={(e) => setUser(e.target.value)}
                             className="inputLoginCrister"
-                            placeholder="  *User"
+                            placeholder="  * User"
                             type="text"
                             value={user}
                             required
@@ -71,15 +79,16 @@ export default function LoginUser() {
                         <input
                             onChange={(e) => setPass(e.target.value)}
                             className="inputLoginCrister"
-                            placeholder="  *Password"
+                            placeholder="  * Password"
                             type="password"
                             value={pass}
                             required
                         />
+                        <p className="alerta_login"></p>
                         <br/>
-                        <input onClick={Login} id="BtnLoginUser" type="button" value="Login"/>
+                        <input onClick={Login} className="btnLogin" type="button" value="Login"/>
                     </form>
-                    <p className="alerta_login"></p>
+                    
                 </div>
             </section>
         </>

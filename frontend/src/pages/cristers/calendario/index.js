@@ -210,15 +210,15 @@ export default function Calendario() {
                             };
                         }
                         return(
-                            <div className="contentpublication" id={`_${conteudo.id}`} key={index}>
+                            <div className="contentpublicationCalendario" id={`_${conteudo.id}`} key={index}>
                 
-                                <div className="dataContent">
+                                <div className="dataContentCalendario">
                                     <FaCalendarAlt size={20}/>
                                     <p className="txtDataContent">{conteudo.dia+"/"+conteudo.mes+"/"+conteudo.ano}</p>
                                 </div>
-                                <div className="coteudoArte">
+                                <div className="coteudoArteCalendario">
                                     <label>
-                                        Tema:
+                                        Tema <br/> 
                                         <input className="slectFormato" id={`t${index}`}
                                             placeholder=" * TEMA"
                                             onChange={e=> tema = e.target.value }
@@ -227,9 +227,9 @@ export default function Calendario() {
                                     <br/><br/>
                                 </div>
                         
-                                <div className="coteudoArte">
+                                <div className="coteudoArteCalendarioFormato">
                                     <label>
-                                        Formato
+                                        Formato<br/>
                                         <select className="slectFormato" id={`_${index}`}
                                             onChange={e => formato = e.target.value} >
                                             <option value='selecionar'>Selecione um formato</option>
@@ -239,33 +239,30 @@ export default function Calendario() {
                                         </select>
                                     </label>
                                 </div>
-                                <div className="descricaoArte">
+                                <div className="descricaoArteCalendario">
                                     <p>Descrição para arte</p>
                                     <textarea rows={8} placeholder="  traga na arte elementos .etc"
                                     onChange={e => descrição = e.target.value}
                                     ></textarea>
                                 </div>
                         
-                                <div className="legendaCliente">
-                                    <h3>Descrição para legenda:</h3>
-                                    <textarea onChange={e => legenda = e.target.value} rows={15} className="legendaPublicação" 
-                                    placeholder={conteudo.legenda}>
+                                <div className="legendaClienteCalendario">
+                                    <p>Descrição para legenda:</p>
+                                    <textarea onChange={e => legenda = e.target.value} rows={10} className="legendaPublicação" 
+                                    placeholder='Descrição para legenda...'>
                                     </textarea>
                                 </div>
-                                <div className="roteiroStoryCliente">
-                                    <h3>Instrução de roteiro Story</h3>
+                                <div className="roteiroStoryClienteCalendario">
+                                    <p>Instrução de roteiro Story</p>
                                     
-                                    <div className="SenMovie">
+                                    <div>
                                         <p className="responseSendMovi"></p>
-                                        <label>
-                                            anexar PDF de roteiro, do "DIA"
-                                            <input  className="inputSend" type="file"/>
-                                        </label>
-                                        <buttonn type='buttonn'  onClick={sendMovi} className="sendMoviBtn">Enviar</buttonn>
+                                        <textarea onChange={e => legenda = e.target.value} rows={10} className="legendaPublicação" 
+                                        placeholder='Roteiro para Stors...'/>
                                     </div>
                                 </div>
-                                <div className="BtnAprovação">
-                                    <buttonn type="buttonn" onClick={aprovedContent} className="btnAprova" >Encaminhar</buttonn>
+                                <div className="BtnAprovacaoCalendario">
+                                    <buttonn type="buttonn" onClick={aprovedContent} className="btnAprovaCalendario" >Encaminhar</buttonn>
                                 </div>
                             </div>
                         )

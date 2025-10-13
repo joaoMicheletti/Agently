@@ -8,6 +8,8 @@ export async function up(knex: Knex): Promise<void> {
         table.string("cpf");// / cnpj
         table.string("nome");
         table.string("pass");
+        table.string('dataRegistro');
+        table.string('diasFree');
         table.string("plano");
         table.string("inicioPlano");
         table.string("terminoPlano");

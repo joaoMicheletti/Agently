@@ -14,6 +14,7 @@ import Aprovacao from '../../../assets/capa_Dashboard/aprovacao.webp'
 import Ajustes  from '../../../assets/capa_Dashboard/ajustes.webp';
 import Chave from '../../../assets/capa_Dashboard/chave.webp';
 import Register from '../../../assets/capa_Dashboard/register.webp';
+import RegisterCopia from '../../../assets/capa_Dashboard/register - Copia.webp';
 import { useNavigate } from "react-router-dom";
 import Api from '../../../services/api';
 
@@ -36,16 +37,14 @@ export default function Dashboard() {
     ];
 
     const cards = [
-        { img: Criacao, link: "createContent", description: "Create Content" },
+        { img: Criacao, link: "createContent", description: "Calendario editorial" },
         { img: Update, link: "updateMaterial", description: "Atualização de Material" },
         { img: Aprovacao, link: "aprovacao", description: "Aprovação de conteudo" },
         { img: Ajustes, link: "solicitacoes", description: "Ajustes Solicitados"},
         { img: Chave, link: "chave", description: "Cahve de acesso "},
         { img: Register, link: "cadUSer", description: "Cadastro de Cliente "},
-        { img: Register, link: "cadColab", description: "Cadastro de colaborador"},
-        { img: User, link: "buscarCliente", description: "update dados Clientes"}, 
-        
-        
+        { img: RegisterCopia, link: "cadColab", description: "Cadastro de colaborador"},
+        { img: User, link: "buscarCliente", description: "update dados Clientes"},   
     ];
 
     const moveCarousel = (direction) => {
@@ -107,7 +106,6 @@ export default function Dashboard() {
     return (
         <>
             <HeaderComponente />
-
             {/* Carrossel */}
             <section className="carousel-container">
                 <div className="carousel">

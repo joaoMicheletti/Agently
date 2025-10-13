@@ -1,5 +1,6 @@
 #headerComponente{
-    height: 40px;
+    
+    height: 50px;
     width: 100%;
     padding: 10px;
     position: fixed; /* Fixando no topo */
@@ -11,11 +12,14 @@
 #linkHeaderComponente {
     margin-left: 20px;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(255, 255, 255);
+    color: #000000;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 #linkHeaderComponente:hover{
     font-weight: 600;
+    color: #2d52b8;
 }
 #numNotification {
     margin-right: 20px;
@@ -46,17 +50,19 @@
     float: right;
     margin-right: 20px;
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: #2d52b8;
     margin-top: -15px;
 }
 #notificationCliente:hover {
     opacity: 50%;
 }
 .notificationCliente{
+    margin-top: 3px;
     float: right;
     margin-right: 20px;
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: #2d52b8;
+    
 }
 
 .notificationCliente:hover {

@@ -5,7 +5,7 @@
 .titleCreateContent {
     text-align: center;
     margin-top: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #clientesContainer {
     display: flex;

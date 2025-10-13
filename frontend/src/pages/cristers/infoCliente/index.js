@@ -188,7 +188,7 @@ async function updateIdInsta() {
         <div className="containerAprovacao">
           <div className="selectClient">
             <label id="selectC">
-              Selecionar Cliente:<br />
+              Selecionar Cliente<br />
               <select value={selecionado} onChange={e => setSelecionado(e.target.value)}>
                 <option value='selecione'>— Selecione o Cliente —</option>
                 {cliente.map(c => (

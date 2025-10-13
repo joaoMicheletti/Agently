@@ -2,9 +2,10 @@
     margin-top: 50px;
 }
 #calendarioConteudo h1 {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-bottom: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 #containerCalendario {
     width: 90%;
@@ -28,6 +29,7 @@
     height: 35px;
     border-radius: 5px;
     margin-top: 10px;
+    background-color: rgba(182, 182, 182, 0.836);
 }
 #btnCalendaroCriar {
     margin-top: 10px;
@@ -37,6 +39,8 @@
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #007bff;
 }
 #respCrono {
     text-align: center;
@@ -52,24 +56,90 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.legendaPublicação {
-    margin-top: 10px;
-    margin-left: 5%;
-    width: 90%;
-    border-radius: 5px;
+.contentpublicationCalendario{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px 10px 0px 0px;
+   background-color: rgba(182, 182, 182, 0.836);
+    width: 30%;
 }
-.slectFormato {
+.dataContentCalendario {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 123, 255, 0.836);
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.coteudoArteCalendario {
+    padding: 10px;
+}
+.coteudoArteCalendario input {
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    margin-top: 10px;
     border-radius: 5px;
-    height: 30px;
     cursor: pointer;
 }
-.descricaoArte {
+.coteudoArteCalendarioFormato {
+    padding: 10px;
+}
+.coteudoArteCalendarioFormato select {
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.descricaoArteCalendario {
     padding: 20px;
 }
-.descricaoArte textarea {
+.descricaoArteCalendario textarea {
     width: 90%;
     margin-left: 5%;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+.legendaClienteCalendario {
+    padding: 20px;
+}
+.legendaClienteCalendarioh3 {
+    margin-bottom: 10px;
+}
+.legendaPublicação {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 5px;
+}
+.roteiroStoryClienteCalendario {
+    background-color: none;
+    padding: 20px;
+}
+.BtnAprovacaoCalendario {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.btnAprovaCalendario {
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#007bff;
+    color: white;
+}
+.btnAprovaCalendario:hover {
+    background-color: rgb(0, 92, 191);
 }

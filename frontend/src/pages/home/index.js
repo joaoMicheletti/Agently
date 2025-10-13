@@ -5,6 +5,10 @@ import Logo from './assets/agentlyLogo.webp';
 import agenda from './assets/agende.webp';
 import propaganda from './assets/propaganda.webp';
 import depMokup from './assets/depMokup.webp';
+import Androis from './assets/android.webp';
+import Ios from './assets/ios.webp';
+import Aplication from './assets/aplicatiion.webp';
+import Suporte from './assets/suporte.webp';
 export default function Home() {
 
     useEffect(() => {
@@ -15,19 +19,20 @@ export default function Home() {
         <>
             <header className="headerHome">
                 <div className="logo">
-                    <img id="LogoHeader" src={Logo} alt="Logo" />
+                    <Link to='/'><img id="LogoHeader" src={Logo} alt="Logo"></img></Link>
+                    
                 </div>
                 <nav id="navHeaderHome">
                     <Link to='/'>Home</Link>
                     <Link to='/'>Planos</Link>
-                    <Link to='/loginUser'>Login cliente</Link>
-                    <Link to='/loginCrister'>Login Crister</Link>
+                    <Link to='/loginCrister'>Login</Link>
                     <Link id="BtnGratis" to='/loginCrister'>Teste Grátis</Link>
                 </nav>
             </header>
             <section className="sectionHome">
                 <div className="contentHome">
-                    <h1 className="typewriter">Automatize seu processo com Agently</h1>
+                    <h1 className="typewriter">Automatize seu processo <br/> 
+                    com Agently</h1>
                     <p>Agende, aprove, publique e mensure em um só lugar — rápido, seguro e 100% automatizado.</p>
                     <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
                 </div>
@@ -41,6 +46,12 @@ export default function Home() {
                     <img src={Logo} alt="Cliente 2" />
                     <img src={Logo} alt="Cliente 3" />
                     {/* Repita os logos para efeito contínuo */}
+                    <img src={Logo} alt="Cliente 1" />
+                    <img src={Logo} alt="Cliente 2" />
+                    <img src={Logo} alt="Cliente 3" />
+                    <img src={Logo} alt="Cliente 1" />
+                    <img src={Logo} alt="Cliente 2" />
+                    <img src={Logo} alt="Cliente 3" />
                     <img src={Logo} alt="Cliente 1" />
                     <img src={Logo} alt="Cliente 2" />
                     <img src={Logo} alt="Cliente 3" />
@@ -72,6 +83,67 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <section className="sectionApllicarion">
+                <div className="containerApllication">
+                    <div className="textApllication">
+                        <h2>Cuide dos seus Clientes de onde estiver!</h2>
+                        <p>
+                            Com Nosso APLICATIVO seus clientes e sua equipe acompanham todos os processos em tempo REAL.
+                            Fala o Download para IOS ou ANDROID.
+                        </p>
+                        <div className="buttonsLojasApp">
+                            <button id="BtnLoja"><Link to='/loginCrister'><img className="imgButtonAplicatiion" src={Androis} alt="icone Loja de APp"></img></Link></button>
+                            <br/>
+                            <button id="BtnLoja"><Link to='/loginCrister'><img className="imgButtonAplicatiion" src={Ios} alt="icone Loja de APp"></img></Link></button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div className="imgAplication">
+                    <img src={Aplication} alt="Chatbot Illustration" />
+                </div>
+
+            </section>
+            <section className="sectionsuporte">
+                <div className="containerSuporte">
+                    <div className="imageSuporte">
+                        <img src={Suporte} alt="Chatbot Illustration" />
+                    </div>
+                    <div className="textSuporte">
+                        <h2>Suporte especializado para você</h2>
+                        <p>
+                            Nossa equipe está pronta para ajudar você a aproveitar ao máximo nossa plataforma.
+                            Entre em contato conosco para qualquer dúvida ou suporte necessário.
+                        </p>
+                        <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                    </div>
+                </div>
+            </section>
+            <footer className="footerHome">
+                <div className="footerContent">
+                    <div className="footerSection">
+                        <img id="LogoFooter" src={Logo} alt="Logo"></img>
+                        <p>Automatize seu processo com Agently</p><br/>
+                        <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                    </div>
+                    <div className="footerSection">
+                        <h3>Links Rápidos</h3>
+                        <ul>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/'>Planos</Link></li>
+                            <li><Link to='/loginCrister'>Login</Link></li>
+                        </ul>
+                    </div>
+                    <div className="footerSection">
+                        <h3>Contato</h3>
+                        <p>Email: jv604014@gmail.com</p>
+                        <p>Telefone: +55 (11) 93222-3533</p>
+                    </div>
+                </div>
+                <div className="footerBottom">
+                    <p>&copy; 2024 Agently. Todos os direitos reservados.</p>
+                </div>
+            </footer>
         </>
     );
 }

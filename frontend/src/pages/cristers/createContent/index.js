@@ -28,7 +28,7 @@ console.log(users)
       <HeaderComponente/>
       <section id="sectionCreateContent">
         <h1 className="titleCreateContent">
-          Clientes Cristers
+          CLientes Ativos
         </h1>
         <div id="clientesContainer">
           {users.map((u, index) => {

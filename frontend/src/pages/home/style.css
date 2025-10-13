@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap');
 a {
     text-decoration: none;
     color: inherit;
@@ -23,7 +24,8 @@ a {
 #LogoHeader
 {
     margin-left: 20px;
-    height: 50px;
+    height: 30px;
+    cursor: pointer;
 }
 #navHeaderHome a
 {
@@ -68,32 +70,22 @@ a {
 .sectionHome
 {
     display: flex;
+    margin-top: calc(headerHome height + 20px);
     justify-content: space-between;
     align-items: center;
     padding: 50px 10px;
+    width: 80%;
+    margin-left: 10%;
 }
 .typewriter {
-    overflow: hidden;
-    border-right: .14em solid #007bff;
+    font-family: 'BBH Sans Bogle', sans-serif;
+    font-size: 45px; 
     white-space: nowrap;
-    margin: 0 auto;
-    animation: typing 8s steps(40, end), blink-caret .75s step-end infinite;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #007bff; }
 }
 .contentHome
 {
     padding: 50px;
-    width: 50%;
+    width: 40%;
 }
 .contentHome p {
     font-family: Arial, Helvetica, sans-serif;
@@ -119,6 +111,7 @@ a {
 }
 .imageHome
 {
+    padding-top: 10px;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -141,7 +134,7 @@ a {
     object-fit: contain;
 }
 .imageHome img {
-    width: 60%;
+    width: 80%;
     animation: girar 15s linear infinite;
 }
 
@@ -157,7 +150,7 @@ a {
     .sectionHome {
         flex-direction: column;
         padding: 20px 5px;
-        padding-top: 200px; /* para header fixo */
+        padding-top: 150px;
     }
     .typewriter {
         font-size: 18px;
@@ -217,7 +210,6 @@ a {
     .sectionHomeAgendamento {
         flex-direction: column;
         padding: 20px 5px;
-        padding-top: 200px; /* para header fixo */
     }
     .ImgAgenda, .textAgenda {
         width: 90%;
@@ -236,7 +228,6 @@ a {
     }
 }
 .depoimentos {
-    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,8 +269,7 @@ a {
 }
 @media (max-width: 800px) {
     .depoimentos {
-        padding: 20px 5px;
-        padding-top: 200px; /* para header fixo */
+        padding: 20px 5px;/* para header fixo */
     }
     .ContainerDepoimento {
         width: 100%;
@@ -298,5 +288,193 @@ a {
         width: 100%;
         margin: 0 auto;
         display: block;
+    }
+}
+
+.sectionApllicarion {
+    display: flex;
+    width: 100%; 
+}
+.containerApllication {
+    width: 80%;
+}
+.textApllication {
+    padding-top: 80px;
+    width: 50%;
+    margin-left: 25%;
+}
+.textApllication h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.textApllication p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;    
+}
+.buttonsLojasApp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.BtnLoja {
+    width: 50%;
+}
+.imgButtonAplicatiion {
+    width: 100px;
+}
+.imgAplication {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgAplication img {
+    width: 50%;
+}
+@media (max-width: 800px) {
+    .sectionApllicarion {
+        flex-direction:  column-reverse;
+        padding: 20px 5px;
+    }
+    .containerApllication {
+        width: 100%;
+    }
+    .textApllication, .imgAplication {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .textApllication h2 {
+        font-size: 22px;
+    }
+    .textApllication p {
+        font-size: 16px;
+    }
+    .buttonsLojasApp {
+        flex-direction: column;
+        align-items: center;
+    }
+    .BtnLoja {
+        width: 80%;
+        margin-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .imgButtonAplicatiion {
+        width: 120px;
+    }
+    .imgAplication img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.sectionsuporte{
+    display: flex;
+    width: 100%;    
+}
+.containerSuporte {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textSuporte {
+    width: 40%;
+    padding: 20px;
+}
+.textSuporte h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.textSuporte p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;    
+}
+.imageSuporte {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageSuporte img {
+    width: 80%;
+}
+@media (max-width: 800px) {
+    .containerSuporte {
+        flex-direction: column;
+        padding: 20px 5px;
+    }
+    .textSuporte, .imageSuporte {
+        width: 90%;
+        padding: 10px 0;
+    }
+    .textSuporte h2 {
+        font-size: 22px;
+    }
+    .textSuporte p {
+        font-size: 16px;
+    }
+    .imageSuporte img {
+        padding-top: 50px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.footerHome {
+    background-color: #105f91;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#LogoFooter {
+    height: 50px;
+    margin-bottom: 10px;
+}
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.footerContent p {
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+}
+.footerSection h3{
+    margin-bottom: 10px;
+}
+.footerSection p{
+    font-size: 15px;
+    color: #3b3c3d;
+}
+.footerSection ul{
+    list-style: none;
+    padding: 0;
+}
+.footerSection ul li{
+    margin: 5px 0;
+}
+@media (max-width: 800px) {
+    .footerContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footerSection {
+        margin-bottom: 20px;
     }
 }
