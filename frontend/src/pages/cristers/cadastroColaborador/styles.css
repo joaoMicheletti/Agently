@@ -1,7 +1,32 @@
+#divformularioLoginColaborador{
+    width: 80%;
+}
+#formularioLoginColaborador {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    box-shadow:  5px 3px 15px #050505;
+    padding: 30px;
+}
 #SelectColab {
     width: 80%;
     margin-left: 10%;
     height: 30px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+#BtnLoginUserColaborador {
+    background-color: #007bff;
+    color: white;
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+#BtnLoginUserColaborador:hover {
+    background-color: #0056b3;
+    cursor: pointer;
 }

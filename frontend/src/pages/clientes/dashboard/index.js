@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import './styles.css';
 import HeaderComponente from "../../../componentes/header_componente";
-import _01 from '../../../assets/capa_Dashboard/01.png';
-import _02 from '../../../assets/capa_Dashboard/02.png';
-import _03 from '../../../assets/capa_Dashboard/03.png';
-import _04 from '../../../assets/capa_Dashboard/04.png';
-import _05 from '../../../assets/capa_Dashboard/05.png';
-import _06 from '../../../assets/capa_Dashboard/06.png';
+import _01 from '../../../assets/capa_Dashboard/01.webp';
+import _02 from '../../../assets/capa_Dashboard/02.webp';
+import _03 from '../../../assets/capa_Dashboard/3.webp';
 import Manual from '../../../assets/capa_Dashboard/07.webp'; // manuao arte 
 import Analise from '../../../assets/capa_Dashboard/analise.webp'; // analise
 import ADM from '../../../assets/capa_Dashboard/adm.webp'; //adm image
@@ -28,9 +25,6 @@ export default function Dashboard() {
         _01,
         _02,
         _03,
-        _04,
-        _05,
-        _06
     ];
 
     const cards = [

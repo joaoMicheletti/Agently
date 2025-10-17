@@ -53,8 +53,8 @@ export default function RegisterCliente() {
     return (
         <>
             <section id="sectionFormulario">
-                <div id="divformularioLogin">
-                    <form id="formularioLoginUser">
+                <div id="divformularioLoginColaborador">
+                    <form id="formularioLoginColaborador">
                         <img id="logoLogin" src={logoLogin} alt="logo img" />
                         <input 
                             
@@ -91,7 +91,7 @@ export default function RegisterCliente() {
                             required
                         />
                         <br/>
-                        <input onClick={Login} id="BtnLoginUser" type="button" value="Register"/>
+                        <input onClick={Login} id="BtnLoginUserColaborador" type="button" value="Register"/>
                     </form>
                     <p className="alerta_login"></p>
                 </div>

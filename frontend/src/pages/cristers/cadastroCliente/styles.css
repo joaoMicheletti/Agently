@@ -1,0 +1,51 @@
+#divformularioLoginCliente{
+    width: 80%;
+}
+#logoLoginCliente {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+#formularioLoginUserCleinte {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    box-shadow:  5px 3px 15px #050505;
+    padding: 30px;
+}
+.inputLoginCristerCliente {
+    width: 80%;
+    margin-left: 10%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(194, 187, 187, 0.678);
+}
+#SelectColab {
+    width: 80%;
+    margin-left: 10%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#BtnLoginUserCliente {
+    background-color: #007bff;
+    color: white;
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+#BtnLoginUserCliente:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+#LGICliente {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    color: #0056b3;
+}

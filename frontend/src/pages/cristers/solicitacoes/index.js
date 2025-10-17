@@ -71,7 +71,7 @@ export default function AprovacaoConteudo() {
         <div className="containerAprovacao">
           <div className="selectClient">
             <label id="selectSolicitacoes">
-              Selecionar Cliente:<br/>
+              Selecionar Cliente<br/>
               <select
                 value={selecionado}
                 onChange={e => setSelecionado(e.target.value)}
@@ -426,16 +426,16 @@ export default function AprovacaoConteudo() {
             
             return(
 
-              <div className="contentpublication" id={`_${item.id}`}  key={item.id} >
+              <div className="contentpublicationSolicitação" id={`_${item.id}`}  key={item.id} >
                 
-                <div className="dataContent">
+                <div className="dataContentSolicitacao">
                     <FaCalendarAlt size={20}/>
                     <p className="txtDataContent">{`${item.dia}/${item.mes}/${item.ano}`}</p>
                 </div>
 
                 <div id="temaAjuste" className="coteudoArte">
                     <label>
-                        Tema:
+                        Tema
                         <h3 id={`_-_${item.id}`}>{item.tema}</h3>
                         <br/>
                     </label>
@@ -448,7 +448,7 @@ export default function AprovacaoConteudo() {
 
                 <div id="formatoUpdate" className="coteudoArte">
                     <label>
-                        Formato:
+                        Formato
                         <h3 id={`_F_${item.id}`} >{item.formato}</h3>
                     </label>
                     <div  className="updateFormato">
@@ -472,7 +472,7 @@ export default function AprovacaoConteudo() {
                                     
                 </div>
 
-                <div className="coteudoArquivos">
+                <div className="coteudoArquivosAjuste">
                   <input id={`__${item.id}`} 
                     type="file" multiple 
                     onChange={e => handleFileChange(item.id, e)}
@@ -486,7 +486,7 @@ export default function AprovacaoConteudo() {
                 
         
                 <div  className="legendaCliente">
-                    <h3  >Legenda:</h3>
+                    <h3  >Legenda</h3>
                     <div id="areaLegenda">
                         <p id={`_L_${item.id}`}>
                             {item.legenda}
@@ -494,7 +494,7 @@ export default function AprovacaoConteudo() {
                     </div>
                     <div className="updateLegenda">
                         <textarea id={`_l_${item.id}`} rows='20'  placeholder=" Nova Legenda"></textarea>
-                        <button onClick={updateLegenda} className="btnAjustes">atualizar</button>
+                        <button onClick={updateLegenda} className="btnAjustesSolicitados">atualizar</button>
                     </div>
                 </div>
 
@@ -512,7 +512,7 @@ export default function AprovacaoConteudo() {
                 </div>
 
                 <div className="BtnAprovaçãoCalendario">
-                    <button id="aprovacaoAprovar" onClick={solicitarAprocacao} type="butonn">Solicitar Aprovação</button>
+                    <button id="aprovacaoAprovarAjustes" onClick={solicitarAprocacao} type="butonn">Solicitar Aprovação</button>
                 </div> 
               </div>
 

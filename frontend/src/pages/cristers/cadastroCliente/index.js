@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import Api from '../../../services/api';
-//import './styles.css';
+import './styles.css';
 import { useNavigate } from "react-router-dom";
 import logoLogin from '../../../assets/image/logoLogin.webp'
 import { FaFacebookSquare } from "react-icons/fa";
@@ -74,13 +74,13 @@ export default function RegisterCliente() {
     return (
         <>
             <section id="sectionFormulario">
-                <div id="divformularioLogin">
-                    <form id="formularioLoginUser">
-                        <img id="logoLogin" src={logoLogin} alt="logo img" />
+                <div id="divformularioLoginCliente">
+                    <form id="formularioLoginUserCleinte">
+                        <img id="logoLoginCliente" src={logoLogin} alt="logo img" />
                         <input 
                             
                             onChange={(e) => setUser(e.target.value)}
-                            className="inputLoginCrister"
+                            className="inputLoginCristerCliente"
                             placeholder="  *User"
                             type="text"
                             value={user}
@@ -89,7 +89,7 @@ export default function RegisterCliente() {
                         <input 
                             
                             onChange={(e) => setIdPerfil(e.target.value)}
-                            className="inputLoginCrister"
+                            className="inputLoginCristerCliente"
                             placeholder="  *ID do perfil Comercial "
                             type="text"
                             value={idPerfil}
@@ -98,7 +98,7 @@ export default function RegisterCliente() {
                         <input 
                             
                             onChange={(e) => setPass(e.target.value)}
-                            className="inputLoginCrister"
+                            className="inputLoginCristerCliente"
                             placeholder="  *Senha"
                             type="password"
                             value={pass}
@@ -107,15 +107,16 @@ export default function RegisterCliente() {
                         <input 
                             
                             onChange={(e) => setCPass(e.target.value)}
-                            className="inputLoginCrister"
+                            className="inputLoginCristerCliente"
                             placeholder="  *Confirmar Senha"
                             type="password"
                             value={cPass}
                             required
                         />
                         <br/>
-                        <input onClick={Login} id="BtnLoginUser" type="button" value="Login"/>
-                        <p id="LGI"><a onClick={handleLogin}><FaFacebookSquare /></a></p><br/>
+                        <input onClick={Login} id="BtnLoginUserCliente" type="button" value="Login"/>
+                        <br/>
+                        <p id="LGICliente"><a onClick={handleLogin}><FaFacebookSquare /></a></p><br/>
                     </form>
                     <p className="alerta_login"></p>
                     
