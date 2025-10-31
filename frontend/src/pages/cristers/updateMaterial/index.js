@@ -1,7 +1,6 @@
 import {React,   useEffect, useState } from "react";
 import HeaderComponente from "../../../componentes/header_componente";
-import FooterComponente from "../../../componentes/footer_componente";
-import _07 from '../../../assets/capa_Dashboard/07.webp';
+import _07 from '../../../assets/capa_Dashboard/user.webp';
 import './styles.css';
 import { useNavigate } from "react-router-dom";
 import Api from '../../../services/api';

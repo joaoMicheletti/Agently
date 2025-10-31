@@ -24,9 +24,9 @@ export default function Home() {
                 </div>
                 <nav id="navHeaderHome">
                     <Link to='/'>Home</Link>
-                    <Link to='/'>Planos</Link>
-                    <Link to='/loginCrister'>Login</Link>
-                    <Link id="BtnGratis" to='/loginCrister'>Teste Grátis</Link>
+                    <Link to='/planos'>Planos</Link>
+                    <Link to='/loginCliente'>Login</Link>
+                    <Link id="BtnGratis" to='/loginCliente'>Teste Grátis</Link>
                 </nav>
             </header>
             <section className="sectionHome">
@@ -34,7 +34,7 @@ export default function Home() {
                     <h1 className="typewriter">Automatize seu processo <br/> 
                     com Agently</h1>
                     <p>Agende, aprove, publique e mensure em um só lugar — rápido, seguro e 100% automatizado.</p>
-                    <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                    <button id="BtnTesteGratis"><Link to='/loginCliente'>Teste Grátis</Link></button>
                 </div>
                 <div className="imageHome">
                     <img src={propaganda} alt="Chatbot Illustration" />
@@ -67,7 +67,7 @@ export default function Home() {
                         Descubra os melhores dias e horários para postar na rede social de seus clientes e 
                         agende posts em todos os formatos aceitos no Instagram!
                     </p>
-                    <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                    <button id="BtnTesteGratis"><Link to='/loginCliente'>Teste Grátis</Link></button>
 
                 </div>
             </section>
@@ -76,7 +76,7 @@ export default function Home() {
                     <div className="textDepoimentos">
                         <h2>Resultados que falam por si</h2>
                         <p>Centralize perfis, ganhe horas no seu dia e mostre resultado.</p>
-                        <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                        <button id="BtnTesteGratis"><Link to='/loginCliente'>Teste Grátis</Link></button>
                     </div>
                     <div className="imageDepoimentos">
                         <img src={depMokup} alt="Chatbot Illustration" />
@@ -92,9 +92,9 @@ export default function Home() {
                             Fala o Download para IOS ou ANDROID.
                         </p>
                         <div className="buttonsLojasApp">
-                            <button id="BtnLoja"><Link to='/loginCrister'><img className="imgButtonAplicatiion" src={Androis} alt="icone Loja de APp"></img></Link></button>
+                            <button id="BtnLoja"><Link to='/loginCliente'><img className="imgButtonAplicatiion" src={Androis} alt="icone Loja de APp"></img></Link></button>
                             <br/>
-                            <button id="BtnLoja"><Link to='/loginCrister'><img className="imgButtonAplicatiion" src={Ios} alt="icone Loja de APp"></img></Link></button>
+                            <button id="BtnLoja"><Link to='/loginCliente'><img className="imgButtonAplicatiion" src={Ios} alt="icone Loja de APp"></img></Link></button>
                         </div>
                         
                     </div>
@@ -115,35 +115,47 @@ export default function Home() {
                             Nossa equipe está pronta para ajudar você a aproveitar ao máximo nossa plataforma.
                             Entre em contato conosco para qualquer dúvida ou suporte necessário.
                         </p>
-                        <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                        <button id="BtnTesteGratis"><Link to='/loginCliente'>Teste Grátis</Link></button>
                     </div>
                 </div>
             </section>
             <footer className="footerHome">
-                <div className="footerContent">
-                    <div className="footerSection">
-                        <img id="LogoFooter" src={Logo} alt="Logo"></img>
-                        <p>Automatize seu processo com Agently</p><br/>
-                        <button id="BtnTesteGratis"><Link to='/loginCrister'>Teste Grátis</Link></button>
+                <div className="footerContainer">
+                    <div className="footerLogoArea">
+                    <img id="LogoFooter" src={Logo} alt="Logo Agently" />
+                    <p>Automatize seu processo com a Agently.</p>
+                    <div className="socialIcons">
+                        <a href="#"><i className="fab fa-instagram"></i></a>
+                        <a href="#"><i className="fab fa-linkedin"></i></a>
+                        <a href="#"><i className="fab fa-youtube"></i></a>
                     </div>
-                    <div className="footerSection">
-                        <h3>Links Rápidos</h3>
-                        <ul>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/'>Planos</Link></li>
-                            <li><Link to='/loginCrister'>Login</Link></li>
-                        </ul>
                     </div>
-                    <div className="footerSection">
-                        <h3>Contato</h3>
-                        <p>Email: jv604014@gmail.com</p>
-                        <p>Telefone: +55 (11) 93222-3533</p>
+
+                    <div className="footerLinks">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/">Planos</Link></li>
+                        <li><Link to="/loginCliente">Login</Link></li>
+                        <li><Link to="/loginCliente">Teste Grátis</Link></li>
+                    </ul>
+                    </div>
+
+                    <div className="footerContact">
+                    <h4>Contato</h4>
+                    <p>📧 contato@agently.com.br</p>
+                    <p>📱 +55 (11) 93222-3533</p>
+                    <button id="BtnFooter"><Link to="/loginCrister">Falar com Suporte</Link></button>
                     </div>
                 </div>
+
+                <div className="footerDivider"></div>
+
                 <div className="footerBottom">
-                    <p>&copy; 2024 Agently. Todos os direitos reservados.</p>
+                    <p>© {new Date().getFullYear()} Agently — Todos os direitos reservados.</p>
                 </div>
             </footer>
+
         </>
     );
 }

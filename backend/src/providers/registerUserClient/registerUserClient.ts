@@ -25,6 +25,7 @@ export class RegisterUserServide {
                 idPerfil,
                 empresa
             }
+            console.log('DATA:', Data);
             var response = await connection('cliente').insert(Data);
             // validar se o dado foi inserido no database 
             if(response[0] > 0){

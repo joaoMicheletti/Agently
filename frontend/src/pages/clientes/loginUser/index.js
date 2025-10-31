@@ -89,9 +89,9 @@ export default function LoginUser() {
                             required
                         />
                         <br/>
-                        <input onClick={Login} id="BtnLoginUser" type="button" value="Login"/>
-                        <p id="LGI"><FaFacebookSquare color="blue" /><a onClick={handleLogin}>Logar com Facebook </a></p>
-                        <p id="Politica"> <a href="https://acasaprime1.com.br/politica-de-privacidade" target="_blank">Política de Privacidade</a></p>
+                        <input onClick={Login} id="BtnLoginUser" type="button" value="Entrar"/>
+                        <p id="LGI"><a onClick={handleLogin}><FaFacebookSquare color="blue" />  Logar com Facebook </a></p>
+                        <p id="Politica"> <a href="https://acasaprime1.com.br/politica-de-privacidade" target="_blank">Política de privacidade</a></p>
                         <br/>
                         <div id="Dcheck">
                             <label id="check">

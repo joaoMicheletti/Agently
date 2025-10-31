@@ -1,0 +1,163 @@
+.sectionPlanos {
+  text-align: center;
+  padding: 80px 5%;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.sectionPlanos h1 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.sectionPlanos p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.containerPlanos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardPlano {
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 40px 30px;
+  width: 300px;
+  transition: 0.3s ease;
+}
+
+.cardPlano:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.cardPlano.planoPopular {
+  border: 2px solid #00c3ff;
+  background: linear-gradient(180deg, #f9fcff 0%, #ffffff 100%);
+}
+
+.cardPlano h2 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-size: 1.5rem;
+  color: #00c3ff;
+  margin-bottom: 20px;
+}
+
+.cardPlano ul {
+  text-align: left;
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.recursos h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+#BtnTesteGratis {
+  background: #00c3ff;
+  border: none;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+#BtnTesteGratis:hover {
+  background: #008fbd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .containerPlanos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.footerLinks h4,
+.footerContact h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footerLinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 8px;
+}
+
+.footerLinks a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #00c3ff;
+}
+
+.footerContact p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+#BtnFooter {
+  margin-top: 10px;
+  background: #00c3ff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#BtnFooter:hover {
+  background: #007bbf;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+  margin: 40px 0 20px 0;
+}
+
+.footerBottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

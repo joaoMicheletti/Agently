@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import HeaderComponente from "../../../componentes/header_componente";
-import FooterComponente from "../../../componentes/footer_componente";
 import './style.css';
 import Api from '../../../services/api';
 import { FaCalendarAlt } from "react-icons/fa";
-import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import clickSound from '../../../assets/music/aproved.mp3'
 
 export default function AprovacaoConteudo() {
@@ -432,8 +430,12 @@ export default function AprovacaoConteudo() {
                     <FaCalendarAlt size={20}/>
                     <p className="txtDataContent">{`${item.dia}/${item.mes}/${item.ano}`}</p>
                 </div>
-
+                  <div className="AjusteSolicitado">
+                    <h2>Ajustes Solicitados</h2>
+                    <p>{item.ajusteCrister}</p>
+                  </div>
                 <div id="temaAjuste" className="coteudoArte">
+                  
                     <label>
                         Tema
                         <h3 id={`_-_${item.id}`}>{item.tema}</h3>
@@ -441,7 +443,7 @@ export default function AprovacaoConteudo() {
                     </label>
                     <div id="temaUpdate">
                         <input id={`__${item.id}`} className="inputTemaAjuste" type="text" placeholder=" Novo tema."/>
-                        <button onClick={updateTema} className="btnAjustes">atualizar</button>
+                        <button onClick={updateTema} className="btnAjustesSolicitados">atualizar</button>
                     </div>
 
                 </div>
@@ -458,7 +460,7 @@ export default function AprovacaoConteudo() {
                             <option value="estatico" >Estático</option>
                             <option value="video" >Vídeo</option>
                         </select>
-                        <button onClick={updateFormato} className="btnAjustes">atualizar</button>
+                        <button onClick={updateFormato} className="btnAjustesSolicitados">atualizar</button>
                     </div>
                 </div>
 

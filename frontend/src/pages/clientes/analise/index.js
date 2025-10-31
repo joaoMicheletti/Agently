@@ -35,9 +35,9 @@ export default function AnaliseCliente(){
     return(
         <>  
             <HeaderComponente/>
-            <section id="analiseClienteSEction">
+            <section id="analiseLiberacaoCliente">
                 
-                <div id="containerAnaliseCliente">
+                <div id="containerAnaliseLiberacaoCliente">
 
                     {publicacao.map((item) => {
                         let files = [];
@@ -121,14 +121,14 @@ export default function AnaliseCliente(){
                             
                         }
                         return(
-                            <div  id={`_-_${item.id}`} className="contentpublication" key={item.id}>
+                            <div  id={`_-_${item.id}`} className="contentpublicationAnalise" key={item.id}>
 
                                 <div className="dataContent">
                                     <FaCalendarAlt size={20}/>
                                     <p className="txtDataContent">{`${item.dia}/${item.mes}/${item.ano}`}</p>
                                 </div>
                                 <div className="clietneFormato">
-                                    <p>Tema: {item.tema}</p>
+                                    <p>Tema:{item.tema}</p>
                                     <br/>
                                     <p>Formato: {item.formato}</p>
                                     <br/>
@@ -145,7 +145,7 @@ export default function AnaliseCliente(){
                                     )}
 
                                     <div id={`_carrossel_${item.id}`}>
-                                        <p>.</p>
+                                        <p></p>
                                     </div>
 
                                     {/* Carrossel */}
@@ -187,7 +187,7 @@ export default function AnaliseCliente(){
                                     </div>
 
                                 <div className="legendaCliente">
-                                    <div className="areaLegenda">
+                                    <div className="areaLegendaNaliseCliente">
                                         <strong><p>Legenda:</p><br/></strong>
                                         <p> {item.legenda}
                                         </p>
@@ -206,7 +206,7 @@ export default function AnaliseCliente(){
                                         <buttonn type='buttonn'  onClick={sendMovi} className="sendMoviBtn">Enviar</buttonn>
                                     </div>
                                 </div>
-                                <div className="BtnAprovação">
+                                <div className="BtnAprovaçãoAnbaliseCliente">
                                     <buttonn type="buttonn" onClick={aprovedContent} className="btnAprova" >Aprovado</buttonn>
                                     <buttonn  type="buttonn" onClick={updateContent}  className="btnAprova">Ajustar</buttonn>
                                 </div>
@@ -215,7 +215,7 @@ export default function AnaliseCliente(){
                                     <br/>
                                     <p className="responseSendUpdate" id={`responseSendUpdate_${item.id}`}></p>
                                     <textarea className="txtAreaAjuste" onChange={e => setAjuste(e.target.value)} placeholder="  Descreva o ponto a ser ajustado."></textarea>
-                                    <buttonn type='buttonn' onClick={sendUPdate} className="solicitarAjuste">Solicitar ajuste</buttonn>
+                                    <button type='buttonn' onClick={sendUPdate} className="solicitarAjuste">Solicitar ajuste</button>
                                 </div>
                             </div>
                         )

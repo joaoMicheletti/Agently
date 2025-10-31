@@ -130,7 +130,7 @@ export default function Calendario() {
         <>
             <HeaderComponent />
             <section id="calendarioConteudo">
-                <h1>Calendário editorial</h1>
+                <h1>Calendario editorial</h1>
                 <div id="containerCalendario">
                     <div id="initEndContent">
                         <label className="labelCalendarioCriar">
@@ -153,7 +153,7 @@ export default function Calendario() {
                         </label>
                         <input
                             onClick={criarCronograma}
-                            id="btnCalendaroCriar"
+                            id="btnCalendaroCriarConteudo"
                             type="button"
                             value="Criar"
                         />

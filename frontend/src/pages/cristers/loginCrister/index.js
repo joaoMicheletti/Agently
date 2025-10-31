@@ -56,13 +56,14 @@ export default function LoginUser() {
     return (
         <>
             <section id="sectionFormulario">
-                <div className="containerLogin">
+                <div className="containerLoginParceiro">
                     <div className="contentLogin">
                         
                         <img src={logoLogin} alt="logo img" />
-                        <Link to="/" id="LinkRegister">HOME</Link><br/>
+                        <Link to="/" id="LinkRegister">HOME</Link><br/><br />
+                        <Link to="/LoginUser" id="LinkRegister">Logar como Cliente</Link><br/>
                         <br />
-                        <Link to="/registerCrister" id="LinkRegister">Não possui uma conta? Cadastre-se</Link>
+                        <Link to="/registerCliente" id="LinkRegister">Não possui uma conta? Cadastre-se</Link>
                     </div>
                     <form className="formLogin">
                         <br/>
@@ -86,7 +87,7 @@ export default function LoginUser() {
                         />
                         <p className="alerta_login"></p>
                         <br/>
-                        <input onClick={Login} className="btnLogin" type="button" value="Login"/>
+                        <buttonn onClick={Login} className="btnLoginCliente" type="button" value="Login">Entrar</buttonn>
                     </form>
                     
                 </div>

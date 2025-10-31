@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import HeaderComponente from "../../../componentes/header_componente";
-import FooterComponente from "../../../componentes/footer_componente";
 import './style.css';
 import Api from '../../../services/api';
 import { FaCalendarAlt } from "react-icons/fa";
@@ -51,11 +50,11 @@ export default function AprovacaoConteudo() {
   return (
     <>
       <HeaderComponente />
-      <section id="sectionAprovacao">
-        <div className="containerAprovacao">
+      <section id="sectionAprovacaoContainer">
+        <div className="containerAprovacaoConteudo">
           <div className="selectClient">
             <label id="selectC">
-              Selecionar Cliente:<br />
+              Selecionar Cliente<br />
               <select value={selecionado} onChange={e => setSelecionado(e.target.value)}>
                 <option value='selecione'>— Selecione o Cliente —</option>
                 {cliente.map(c => (
@@ -78,7 +77,7 @@ export default function AprovacaoConteudo() {
           </div>
         </div>
 
-        <div className="conteudoAprovacao">
+        <div className="conteudoAprovacaoContainer">
           {calendario.map((item) => {
             let files = [];
             try {
@@ -161,16 +160,16 @@ export default function AprovacaoConteudo() {
             }            
             return(
 
-              <div className="contentpublication" id={`_${item.id}`}  key={item.id} >
+              <div className="contentpublicationAprovacao" id={`_${item.id}`}  key={item.id} >
                 
-                <div className="dataContent">
+                <div className="dataContentAprovacao">
                     <FaCalendarAlt size={20}/>
                     <p className="txtDataContent">{`${item.dia}/${item.mes}/${item.ano}`}</p>
                 </div>
 
-                <div className="coteudoArte">
+                <div className="coteudoArteAprovacao">
                     <label>
-                        Tema:
+                        Tema
                         <h3>{item.tema}</h3>
                         <br/>
                     </label>
@@ -178,9 +177,9 @@ export default function AprovacaoConteudo() {
                 </div>
 
 
-                <div className="coteudoArte">
+                <div className="coteudoArteAprovacao">
                     <label>
-                        Formato:
+                        Formato
                         <h3>{item.formato}</h3>
                     </label>
                 </div>
@@ -238,9 +237,9 @@ export default function AprovacaoConteudo() {
 
                 </div>
 
-                <div className="legendaCliente">
-                    <h3>Legenda:</h3>
-                    <div className="areaLegenda">
+                <div className="legendaClienteAprovacao">
+                    <h3>Legenda</h3>
+                    <div className="areaLegendaClienteAprovacao">
                       <p  className="legendaPublicação">
                         {item.legenda}
                       </p>
@@ -260,12 +259,12 @@ export default function AprovacaoConteudo() {
                     </div>
                 </div>
 
-                <div className="BtnAprovaçãoCalendario">
-                    <button id="aprovacaoAprovar" onClick={aprovarParaCliente} type="butonn">Aprovar</button>
+                <div className="BtnAprovaçãoCalendarioAprovacao">
+                    <button id="aprovacaoAprovarButton" onClick={aprovarParaCliente} type="butonn">Aprovar</button>
                 </div> 
-                <div id="AjusteCrister" className="BtnAprovaçãoCalendario">
-                  <textarea id={`_-_${item.id}`} className="areaAjusteCliente" placeholder=" Liste os ajustes"></textarea>
-                   <button onClick={solicitarAjuste} type="buttonn"   className="aprovacaoAprovar">solicitar ajuste</button>
+                <div id="AjusteCristerAprovacao" className="BtnAprovaçãoCalendario">
+                  <textarea id={`_-_${item.id}`} className="areaAjusteClienteAprovacao" placeholder=" Liste os ajustes"></textarea>
+                   <button onClick={solicitarAjuste} type="buttonn"   className="aprovacaoAprovarButton">solicitar ajuste</button>
                 </div>
               </div>
 

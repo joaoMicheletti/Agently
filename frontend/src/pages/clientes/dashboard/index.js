@@ -4,11 +4,9 @@ import HeaderComponente from "../../../componentes/header_componente";
 import _01 from '../../../assets/capa_Dashboard/01.webp';
 import _02 from '../../../assets/capa_Dashboard/02.webp';
 import _03 from '../../../assets/capa_Dashboard/3.webp';
-import Manual from '../../../assets/capa_Dashboard/07.webp'; // manuao arte 
-import Analise from '../../../assets/capa_Dashboard/analise.webp'; // analise
-import ADM from '../../../assets/capa_Dashboard/adm.webp'; //adm image
-import Agenda from '../../../assets/capa_Dashboard/eventos.webp'// eventos img 
-import Metricas from '../../../assets/capa_Dashboard/metricas.webp'; // relatioro img 
+import Manual from '../../../assets/capa_Dashboard/user.webp'; // manuao arte 
+import Analise from '../../../assets/capa_Dashboard/criacao.webp'; // analise
+import Metricas from '../../../assets/capa_Dashboard/aprovacao.webp'; // relatioro img 
 import { useNavigate } from "react-router-dom";
 import Api from '../../../services/api';
 
@@ -28,14 +26,10 @@ export default function Dashboard() {
     ];
 
     const cards = [
-        { img:  Manual, link: "manualAplication", description: "Manual da do aplicativo" },
-        { img: Analise, link: "analiseCliente", description: "Analise e liberação" },
-        { img:  Metricas, link: "", description: "Relatorio de Métricas." },
-
-        { img:  Agenda, link: "", description: "Agenda de Eventos." },
-        { img:  ADM, link: "administrativo", description: "Administrativo" },        
+        { img:  Manual, link: "manualAplication", description: "Manual do aplicativo" },
+        { img: Analise, link: "analiseCliente", description: "Analise e liberação" },       
         { img:  Metricas, link: "arquivoMorto", description: "Arquivo Morto" },
-        { img:  Metricas, link: "ajustesCliente", description: "Ajustes" },
+        //{ img:  Metricas, link: "ajustesCliente", description: "Ajustes" },
         
     ];
 

@@ -1,0 +1,49 @@
+.sectionNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: linear-gradient(180deg, #f9fcff 0%, #ffffff 100%);
+  color: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+}
+
+.notFoundContent {
+  max-width: 600px;
+  animation: fadeIn 0.8s ease;
+}
+
+.errorCode {
+  font-size: 7rem;
+  color: #00c3ff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+  text-shadow: 0 0 10px rgba(0,195,255,0.3);
+}
+
+.sectionNotFound h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.sectionNotFound p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+#BtnTesteGratis a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#BtnTesteGratis:hover {
+  background: #008fbd;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

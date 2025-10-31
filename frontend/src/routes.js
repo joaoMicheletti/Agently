@@ -26,12 +26,18 @@ import ArquivoMorto from './pages/clientes/arquivoMorto/index.js';
 import PoliticaDePrivacidade from './pages/politica/index.js';
 import Termos from './pages/termos/index.js';
 import Delete from './pages/delete/index.js';
+import PLanos from './pages/planos/index.js';
 // <Route path='*' element={<NotFound/>}/>
+import NotFound from './pages/noffound/index.js';
+// registro de Cliente:
+import RegisterC from './pages/cristers/registerCliente/index.js';
 export default function Rotas(){
     return(
         <Router>
             <Routes>
-                <Route path='/' element={<Home/>} />               
+                <Route path='*' element={<NotFound/>}/>
+                <Route path='/' element={<Home/>} />
+                <Route path='planos' element={<PLanos/>}/>               
                 <Route path='loginUser' element={<LoginUser/>}/>
                 <Route path='dashboardCliente' element={<Dashboard/>}/>
                 <Route path='analiseCliente' element={<AnaliseCliente/>}/>
@@ -44,7 +50,8 @@ export default function Rotas(){
                 <Route path='termos' element={<Termos/>}/>
                 <Route path='delete' element={<Delete/>}/>
 
-                <Route path='loginCrister' element={<LoginCrister/>}/>
+                <Route path='loginCliente' element={<LoginCrister/>}/>
+                <Route path='registerCliente' element={<RegisterC/>}/>
                 <Route path='dashboardCrister' element={<DashboarCrister/>}/>
                 <Route path='createContent' element={<CreateContent/>}/>
                 <Route path='calendario' element={<Calendario/>}/>

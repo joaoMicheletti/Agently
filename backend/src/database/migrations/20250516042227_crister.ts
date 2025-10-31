@@ -8,13 +8,14 @@ export async function up(knex: Knex): Promise<void> {
         table.string("cpf");// / cnpj
         table.string("nome");
         table.string("pass");
-        table.string('dataRegistro');
-        table.string('diasFree');
+        table.timestamp('data_criacao').defaultTo(knex.fn.now());
+        table.integer('diasFree').defaultTo(7);
         table.string("plano");
         table.string("inicioPlano");
         table.string("terminoPlano");
         table.string('valorPlano');
         table.integer('colaboradores');
+        table.integer('clientes');
     });
 }
 

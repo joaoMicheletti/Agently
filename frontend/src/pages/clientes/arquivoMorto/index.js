@@ -29,9 +29,9 @@ export default function AnaliseCliente(){
     return(
         <>  
             <HeaderComponente/>
-            <section id="analiseClienteSEction">
+            <section id="arquivoMortoClienteContainer">
                 
-                <div id="containerAnaliseCliente">
+                <div id="containerMortoContent">
 
                     {publicacao.map((item) => {
                         let files = [];
@@ -47,14 +47,14 @@ export default function AnaliseCliente(){
                         }
                         
                         return(
-                            <div  id={`_-_${item.id}`} className="contentpublication" key={item.id}>
+                            <div  id={`_-_${item.id}`} className="contentpublicationMorto" key={item.id}>
 
                                 <div className="dataContent">
                                     <FaCalendarAlt size={20}/>
                                     <p className="txtDataContent">{`${item.dia}/${item.mes}/${item.ano}`}</p>
                                 </div>
                                 <div className="clietneFormato">
-                                    <p>Tema: {item.tema}</p>
+                                    <p>Tema:{item.tema}</p>
                                     <br/>
                                     <p>Formato: {item.formato}</p>
                                     <br/>
@@ -112,8 +112,8 @@ export default function AnaliseCliente(){
 
                                     </div>
 
-                                <div className="legendaCliente">
-                                    <div className="areaLegenda">
+                                <div className="legendaClienteMorto">
+                                    <div className="areaLegendaMortoCliente">
                                         <strong><p>Legenda:</p><br/></strong>
                                         <p> {item.legenda}
                                         </p>
