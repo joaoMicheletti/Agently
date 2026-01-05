@@ -89,10 +89,10 @@ export default function Dashboard() {
             console.log('Permissão de notificação:', permission);
             if (permission === 'granted') {
                 // Aqui você pode disparar uma notificação de exemplo, se quiser:
-                /*new Notification('Notificações ativadas!', {
-                    body: 'Você receberá novidades da Cristatus 🚀',
-                    icon: '/icon.png' // Opcional: coloque o caminho do seu ícone
-                });*/
+                //new Notification('Notificações ativadas!', {
+                  //  body: 'Você receberá novidades da Agently 🚀',
+                    //icon: '/icon.png' // Opcional: coloque o caminho do seu ícone
+                //});
             }
         });
     }
