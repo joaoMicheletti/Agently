@@ -6,36 +6,43 @@ import connection from 'src/database/connection';
 export class RegisterUserServide {
     //registrando usuario-cliente
     async registerUser(data: RegisterUserClietDTO): Promise<object> {
-        console.log(data.user);
-        var verificar = await connection("cliente").where('user', data.user).where('pass', data.pass).select("*");
-        
-        if(verificar.length > 0){
-            console.log(verificar);
-            return {res: "Usuário Já cadastrado"};
-        }
-        else {
-            const {user, pass, initPlano, idPerfil, empresa} = data;  // desconstruindo o data para crar um novo ogjeto 
-            var token =  initPlano+user // token de acesso 
-            //objeto comas infomações a serem escritas no database.
-            var Data = {
-                user,
-                pass,
-                initPlano, 
-                token,
-                idPerfil,
-                empresa
+        console.log(data);
+        // adicionar verificação, temos permição para cadastrar o usuario?.
+        const verifi= await connection('crister').where('cpf', data.empresa).select('*');
+        console.log('verifi', verifi);
+        if (verifi[0].clientesLimite === null) {
+            return {res: 'Seu plano não permite cadastrar clientes, entre em contato com o suporte!'};
+        } else if(verifi[0].clientes > verifi[0].clientesLimite){ 
+            return {res: 'Limite de clientes atingido, atualize seu plano para cadastrar mais clientes!'};
+        } else {
+            var verificar = await connection("cliente").where('user', data.user).where('pass', data.pass).select("*");
+            if(verificar.length > 0){
+                console.log(verificar);
+                return {res: "Usuário Já cadastrado"};
             }
-            console.log('DATA:', Data);
-            var response = await connection('cliente').insert(Data);
-            // validar se o dado foi inserido no database 
-            if(response[0] > 0){
-                return {res: "Registrado com sucesso!"};
-            }else {
-                return {res: "Erro interno!"};
-            };              
+            else {
+                const {user, pass, initPlano, idPerfil, empresa} = data;  // desconstruindo o data para crar um novo ogjeto 
+                var token =  initPlano+user // token de acesso 
+                //objeto comas infomações a serem escritas no database.
+                var Data = {
+                    user,
+                    pass,
+                    initPlano, 
+                    token,
+                    idPerfil,
+                    empresa
+                }
+                console.log('DATA:', Data);
+                var response = await connection('cliente').insert(Data);
+                // validar se o dado foi inserido no database 
+                if(response[0] > 0){
+                    return {res: "Registrado com sucesso!"};
+                }else {
+                    return {res: "Erro interno!"};
+                };              
 
-        }
-        
+            }
+        }        
     };
     async getUser(data: RegisterUserClietDTO): Promise<object> {
         let res = await connection("cliente").select("*");

@@ -15,7 +15,12 @@ export async function up(knex: Knex): Promise<void> {
         table.string("terminoPlano");
         table.string('valorPlano');
         table.integer('colaboradores');
+        table.integer('colaboradoresLimite');
+        table.string('storageUsed');
+        table.string('storyAutomations');
+        table.integer('clientesLimite');
         table.integer('clientes');
+        table.string('suporte');
     });
 }
 

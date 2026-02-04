@@ -3,4 +3,5 @@ export class ColaboradorDto {
     pass: string;
     funcao: string;
     empresa: string;
+    descricaoFuncao: string;
 }

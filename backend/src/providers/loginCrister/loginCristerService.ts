@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { ConsoleLogger, Injectable } from "@nestjs/common";
 import { LoginCristerDTO } from "src/controllers/loginCrister/loginCristerDTO";
 import connection from "src/database/connection";
 
@@ -12,14 +12,17 @@ export class LoginCristerService{
         let response = await connection('crister').where('cpf', user).select('*');
 
         console.log('response:',response)
+        console.log(response.length);
         // empresa encontrada
         if(response.length > 0){
-            console.log('aqui');
+            console.log('aqui',"senha baco:", response[0].pass, "senha recebida:", pass);
+            console.log(response[0].pass === pass);
             if(response[0].pass === pass){
                 console.log("TTTT");
                 condition = user;
             } else {
-                condition += 'User not found!';
+                console.log('senha errada')
+                condition = 'User not found!';
             }
           //buscar colaborador.  
         } else {

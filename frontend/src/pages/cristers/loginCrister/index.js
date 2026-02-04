@@ -27,6 +27,7 @@ export default function LoginUser() {
                 console.log(Response);
                 if(Response.res === 'User not found!'){
                     document.querySelector('.alerta_login').innerHTML ='Usuário não encontrado.'
+                    return;
                 } else {
                     //remover os sessions storage:
                     sessionStorage.removeItem("tokenCrister");

@@ -10,6 +10,7 @@ export async function up(knex: Knex): Promise<void> {
         table.string('funcao');
         table.string('empresa');
         table.string('token');
+        table.timestamp('data_criacao').defaultTo(knex.fn.now());
     });
 }
 

@@ -10,10 +10,46 @@ export default function RegisterCliente() {
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
     const [cPass, setCPass] = useState('');
-    const [ idPerfil, setIdPerfil] = useState('');
+    const [ idPerfil, setIdPerfil] = useState(''); // variavel responsavel por armazenar a ;função do colaborador. nome generico
+    const [ funcao, setFuncao] = useState('');
+    const [ descricaoFuncao, setDescricaoFuncao] = useState('');
 
+    //funcção para mostrar campos a serem preenchidos de cadastro de Funcionalidades
+    async function mostrarFuncao(e){
+        e.preventDefault();
+        document.querySelector('#divformularioLoginColaborador').style.display = 'none';
+        document.querySelector('.cadastroDeFunction').style.display = 'flex';
+    }
+
+    // funcção de cadastro de Funcionalidades.
+    async function cadastrarFuncao(e){
+        e.preventDefault();
+        const Data = {
+            nomeCargo: funcao,
+            descricaoCargo: descricaoFuncao,
+            empresa: sessionStorage.getItem('tokenCrister')
+        };
+        console.log(Data)
+        Api.post("/registerFuncao", Data).then((response) => {
+            // validar resposta e responder de acordo.
+            const responseEl = document.querySelector('.responseServer');
+            if(response.data.res === "Função cadastrada com sucesso!"){
+                document.querySelector('.responseServer').innerHTML = '*'+ response.data.res;
+                setTimeout(() => {
+                    window.location.reload();
+                }, 3000);
+            } else {
+                responseEl.style.color = 'red';
+                document.querySelector('.responseServer').innerHTML = '*'+ response.data.res;
+            }
+        }).catch((erro) =>{
+            alert("server not found");
+        })
+        
+
+    }
     // Função de login
-    async function Login(e) {
+    async function RegistrarColab(e) {
         e.preventDefault(); // Previne o comportamento padrão de envio do formulário
         // Aqui você pode adicionar lógica para autenticação real
         if(use === "" || pass === "" || cPass === "" || idPerfil === "" ){
@@ -26,25 +62,18 @@ export default function RegisterCliente() {
             const Data = {
             user,
             pass,
-            funcao: idPerfil,
+            funcao: idPerfil, // variavel com nome generico.
             empresa: sessionStorage.getItem('tokenCrister')
             };
             console.log(Data)
             //enviar para a api e autenticar usuario
             await Api.post('/registerColab', Data).then((response) => {
-                var Response = response.data;
-                console.log(Response);
-                if(Response.res === 'Registrado com sucesso!'){
-                    alert(response.data.res)
-                    Hystory('/dashboardCrister')
-                } else if(response.data.res ="Colaborador já cadasstrado!"){
-                    console.log(response)
+                console.log(response.data.res);
+                if(response.data.res === "Defina um limite de colaboradores no seu plano para cadastrar novos colaboradores."){
                     alert(response.data.res);
-                } else {
-                    alert(response.data.res)
                 }
             }).catch((erro) =>{
-                alert("server not found");
+                console.log("server not found");
             });
         };
         
@@ -53,11 +82,28 @@ export default function RegisterCliente() {
     return (
         <>
             <section id="sectionFormulario">
+            <div className="cadastroDeFunction">
+                <h1 className="titleNovaFunction">Nova Função.</h1>
+                <p className="responseServer"></p>
+                <br/>
+                <input 
+                    onChange={(e) => setFuncao(e.target.value)}
+                    className="inputNovaFunction" 
+                    placeholder="   Cargo.."
+                />
+                <textarea
+                    value={descricaoFuncao}
+                    onChange={(e) => setDescricaoFuncao(e.target.value)}
+                    maxLength={500}
+                    className="textAreaNovaFunction"
+                    placeholder="Descreva essa função (até 500 caracteres)."
+                />
+                <button onClick={cadastrarFuncao} className="btnNovaFunction">Adicionar Função</button>                
+            </div>
                 <div id="divformularioLoginColaborador">
                     <form id="formularioLoginColaborador">
                         <img id="logoLogin" src={logoLogin} alt="logo img" />
                         <input 
-                            
                             onChange={(e) => setUser(e.target.value)}
                             className="inputLoginCrister"
                             placeholder="  *User"
@@ -73,7 +119,6 @@ export default function RegisterCliente() {
                             <option value='gestor'>Gestor de Progetos</option>
                         </select>
                         <input 
-                            
                             onChange={(e) => setPass(e.target.value)}
                             className="inputLoginCrister"
                             placeholder="  *Senha"
@@ -81,8 +126,7 @@ export default function RegisterCliente() {
                             value={pass}
                             required
                         />
-                        <input 
-                            
+                        <input     
                             onChange={(e) => setCPass(e.target.value)}
                             className="inputLoginCrister"
                             placeholder="  *Confirmar Senha"
@@ -90,8 +134,10 @@ export default function RegisterCliente() {
                             value={cPass}
                             required
                         />
+                        <a className="addfunction" onClick={mostrarFuncao} id="linkNovaFuncaoColab">+ Adicionar nova função</a>
                         <br/>
-                        <input onClick={Login} id="BtnLoginUserColaborador" type="button" value="Register"/>
+                        
+                        <input onClick={RegistrarColab} id="BtnLoginUserColaborador" type="button" value="Register"/>
                     </form>
                     <p className="alerta_login"></p>
                 </div>

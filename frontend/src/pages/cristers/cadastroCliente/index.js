@@ -51,7 +51,9 @@ export default function RegisterCliente() {
         
     };
 
-    // InstagramLoginButton.tsx
+    // InstagramLoginButton.tsx  exige o serviço online para validar essa funcionalidade.
+    //adicionar verificação, registrar cliente somente se o plano contratado permitir.
+    // na rota de callback.
     const empresaCNPJ = sessionStorage.getItem('tokenCrister')
     const clientId = '3117860508390563';
     const redirectUri = 'http://localhost:3333/callback'; // configure no Facebook Dev
